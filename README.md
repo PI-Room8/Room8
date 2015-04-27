@@ -6,4 +6,8 @@ Une vaisselle qui ne dépile jamais ? Un manque constant de papier toilette ? De
 Edition du Projet
 Test 
 Gabiche Test
+<<<<<<< HEAD
 JB's test
+=======
+Jb pas bien
+>>>>>>> FETCH_HEAD
