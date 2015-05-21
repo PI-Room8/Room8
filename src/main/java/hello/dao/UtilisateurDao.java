@@ -39,5 +39,34 @@ public class UtilisateurDao {
 		
 		return "ok";
 	}
+	
+	public String majUtilisateur(Utilisateur utilisateur)
+	{
+		Connection conn = JdbcConnection.connect();
+		
+		try
+		{
+			String sql = "UPDATE utilisateurs SET Nom_utilisateur=?, Mot_de_passe=?, Adresse_mail=? WHERE Id_utilisateur=?";
+			PreparedStatement prep = conn.prepareStatement(sql);
+			prep.setString(1, utilisateur.getNom_utilisateur());
+			prep.setString(2, utilisateur.getMot_de_passe());
+			prep.setString(3, utilisateur.getAdresse_mail());
+			prep.setInt(4, utilisateur.getId_utilisateur());
+		
+			
+			prep.executeUpdate();	
+				
+		}
+		catch(SQLException s){
+			System.out.println("Exception :" + s.toString());
+			return s.getClass().toString();
+		}
+		catch(Exception e){
+			e.printStackTrace();
+		}
+		
+		
+		return "ok";
+	}
 
 }

@@ -18,6 +18,17 @@ public class Utilisateur {
 		this.mot_de_passe = mot_de_passe;
 		this.adresse_mail = adresse_mail;
 	}
+	
+	
+
+
+	public Utilisateur(int id_utilisateur, String nom_utilisateur,
+			String mot_de_passe, String adresse_mail) {
+		this.id_utilisateur = id_utilisateur;
+		this.nom_utilisateur = nom_utilisateur;
+		this.mot_de_passe = mot_de_passe;
+		this.adresse_mail = adresse_mail;
+	}
 
 
 

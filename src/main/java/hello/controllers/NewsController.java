@@ -31,9 +31,9 @@ public class NewsController {
 	}
 	
 	@RequestMapping("/addNews")
-	public int addNews(@RequestParam(value = "news", required = true) String news, @RequestParam(value = "id_coloc", required = true) int id_coloc)
+	public int addNews(@RequestParam(value = "text", required = true) String text, @RequestParam(value = "id_coloc", required = true) int id_coloc)
 	{
-		News _news = new News(news,id_coloc);
+		News _news = new News(text,id_coloc);
 		
 		int ret = newsDao.addNewsDao(_news);
 		
