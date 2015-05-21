@@ -3,7 +3,7 @@ package hello.objects;
 public class News {
 
 	private int id_news;
-	private String news;
+	private String text;
 	private int id_coloc;
 	private String date;
 	
@@ -11,14 +11,14 @@ public class News {
 		
 	}
 	
-	public News(String news, int id_coloc) {
-		this.news = news;
+	public News(String text, int id_coloc) {
+		this.text = text;
 		this.id_coloc = id_coloc;
 	}
 
-	public News(int id_news, String news, int id_coloc, String date) {
+	public News(int id_news, String text, int id_coloc, String date) {
 		this.id_news = id_news;
-		this.news = news;
+		this.text = text;
 		this.id_coloc = id_coloc;
 		this.date = date;
 	}
@@ -34,13 +34,13 @@ public class News {
 	}
 
 
-	public String getNews() {
-		return news;
+	public String getText() {
+		return text;
 	}
 
 
-	public void setNews(String news) {
-		this.news = news;
+	public void setText(String text) {
+		this.text = text;
 	}
 
 

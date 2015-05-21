@@ -32,7 +32,7 @@ public class NewsDao {
 		      while(rs.next())
 		      {
 		    	  int id = rs.getInt("Id_news");
-		    	  String nouvelle = rs.getString("News");
+		    	  String nouvelle = rs.getString("Text");
 		    	  int id_colocation = rs.getInt("Id_colocation");
 		    	  String date = rs.getString("Date");
 		    	 
@@ -67,9 +67,9 @@ public class NewsDao {
 		try
 		{
 			
-			String sql = "INSERT into news(News,Id_colocation,Date) VALUES(?,?,NOW())";
+			String sql = "INSERT into news(Text,Id_colocation,Date) VALUES(?,?,NOW())";
 			PreparedStatement prep = conn.prepareStatement(sql); 
-			prep.setString(1, news.getNews());
+			prep.setString(1, news.getText());
 			prep.setInt(2, news.getId_coloc());
 			
 			ret = prep.executeUpdate();
