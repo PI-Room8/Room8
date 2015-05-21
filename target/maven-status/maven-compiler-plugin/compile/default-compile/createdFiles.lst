@@ -1,1 +1,7 @@
-app\Room8Application.class
+hello\jdbc\JdbcConnection.class
+hello\ServletInitializer.class
+hello\SimpleCORSFilter.class
+hello\controllers\NewsController.class
+hello\objects\News.class
+hello\Room8appApplication.class
+hello\dao\NewsDao.class

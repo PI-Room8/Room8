@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: Room8app
+Implementation-Version: 0.0.2-SNAPSHOT
+Built-By: Clￃﾩm
+Implementation-Vendor-Id: org.springframework
+Build-Jdk: 1.8.0_40
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+Main-Class: hello.Room8appApplication
+
