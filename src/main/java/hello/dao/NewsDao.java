@@ -59,10 +59,10 @@ public class NewsDao {
 		
 	}
 	
-	public int addNewsDao(News news)
+	public String addNewsDao(News news)
 	{
 		Connection conn = JdbcConnection.connect();
-		int ret = 0;
+		String ret = null;
 		
 		try
 		{
@@ -72,16 +72,17 @@ public class NewsDao {
 			prep.setString(1, news.getText());
 			prep.setInt(2, news.getId_coloc());
 			
-			ret = prep.executeUpdate();
-			
-			System.out.println("Retour sql = " + ret);
-				
+			prep.executeUpdate();
+			ret = "News Ajoutée";	
 		}
 		catch(SQLException s){
 			s.printStackTrace();
+			ret = s.getMessage();
 		}
 		catch(Exception e){
 			e.printStackTrace();
+
+			ret = e.getMessage();
 		}
 		
 		return ret;

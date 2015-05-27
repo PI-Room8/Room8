@@ -19,11 +19,11 @@ public class NewsController {
 	private NewsDao newsDao;
 	
 	@RequestMapping(value = "/getAllNews", method = RequestMethod.GET)
-	public ArrayList<News> getAllNews( @RequestParam(value = "id", required = true) int id)
+	public ArrayList<News> getAllNews( @RequestParam(value = "id", required = true) int idColoc)
 	{
 		System.out.println("appel controller getAllNews");
 		ArrayList<News> list = new ArrayList<News>();
-		list= newsDao.getAllNewsDao(id);
+		list= newsDao.getAllNewsDao(idColoc);
 		
 		return list;
 		
@@ -31,11 +31,11 @@ public class NewsController {
 	}
 	
 	@RequestMapping("/addNews")
-	public int addNews(@RequestParam(value = "text", required = true) String text, @RequestParam(value = "id_coloc", required = true) int id_coloc)
+	public String addNews(@RequestParam(value = "text", required = true) String text, @RequestParam(value = "id_coloc", required = true) int id_coloc)
 	{
 		News _news = new News(text,id_coloc);
 		
-		int ret = newsDao.addNewsDao(_news);
+		String ret = newsDao.addNewsDao(_news);
 		
 		return ret;
 	}
